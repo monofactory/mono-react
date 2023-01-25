@@ -1,5 +1,5 @@
 {
-  "name": "next-tailwinds-mui",
+  "name": "monofactory-react",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://monofactory.github.io/monofactory-react/",
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
