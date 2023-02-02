@@ -1,15 +1,20 @@
 /** @type {import('next').NextConfig} */
 
+const isProd = process.env.NODE_ENV === 'production'
 //const debug = process.env.NODE_ENV !== 'production'
 //const repository = 'monofactory-react'
 
 const nextConfig = {
   reactStrictMode: true,
+  assetPrefix: isProd ? '/monofactory-react/' : '',
   images: {
-    loader: 'akamai',
-    path: '',
+    unoptimized: true,
   },
-  assetPrefix: './',
+  // images: {
+  //   loader: 'akamai',
+  //   path: '',
+  // },
+  // assetPrefix: './',
   // images: {
   //   loader: 'akamai',
   //   path: '/',
