@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import '../styles/globals.css'
 import { theme } from '../theme/theme'
+import { PortfolioProvider } from '../context/context'
+import { prefix } from '../config/config'
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -14,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [])
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <PortfolioProvider value={{ prefix }}>
+        <Component {...pageProps} />
+      </PortfolioProvider>
     </ThemeProvider>
   )
 }

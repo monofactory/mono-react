@@ -5,7 +5,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 710:
+/***/ 868:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -22,6 +22,7 @@ var jsx_runtime_ = __webpack_require__(997);
 const material_namespaceObject = require("@mui/material");
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(689);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 ;// CONCATENATED MODULE: external "@mui/material/styles"
 const styles_namespaceObject = require("@mui/material/styles");
 ;// CONCATENATED MODULE: ./theme/theme.ts
@@ -74,7 +75,19 @@ const theme = (0,styles_namespaceObject.createTheme)({
 });
 
 
+;// CONCATENATED MODULE: ./context/context.js
+
+const PortfolioContext = /*#__PURE__*/ external_react_default().createContext();
+const PortfolioProvider = PortfolioContext.Provider;
+const PortfolioConsumer = PortfolioContext.Consumer;
+/* harmony default export */ const context = ((/* unused pure expression or super */ null && (PortfolioContext)));
+
+;// CONCATENATED MODULE: ./config/config.js
+const prefix =  true ? "https://monofactory.github.io/monofactory-react/" : 0;
+
 ;// CONCATENATED MODULE: ./pages/_app.tsx
+
+
 
 
 
@@ -90,8 +103,13 @@ function MyApp({ Component , pageProps  }) {
     }, []);
     return /*#__PURE__*/ jsx_runtime_.jsx(material_namespaceObject.ThemeProvider, {
         theme: theme,
-        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-            ...pageProps
+        children: /*#__PURE__*/ jsx_runtime_.jsx(PortfolioProvider, {
+            value: {
+                prefix: prefix
+            },
+            children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+                ...pageProps
+            })
         })
     });
 }
@@ -121,7 +139,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(710));
+var __webpack_exports__ = (__webpack_exec__(868));
 module.exports = __webpack_exports__;
 
 })();
