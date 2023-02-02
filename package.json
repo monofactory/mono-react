@@ -2,7 +2,7 @@
   "name": "monofactory-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://monofactory.github.io/monofactory-react/",
+  "homepage": "http://monofactory.github.io/monofactory-react/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
