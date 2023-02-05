@@ -15,11 +15,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [])
   return (
-    <ThemeProvider theme={theme}>
-      <PortfolioProvider value={{ prefix }}>
+    <PortfolioProvider value={{ prefix }}>
+      <ThemeProvider theme={theme}>
         <Component {...pageProps} />
-      </PortfolioProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </PortfolioProvider>
   )
 }
 
