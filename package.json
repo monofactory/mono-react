@@ -5,12 +5,12 @@
   "homepage": "http://monofactory.github.io/monofactory-react/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
+    "build": "next build && next export",
     "predeploy": "npm run build",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",

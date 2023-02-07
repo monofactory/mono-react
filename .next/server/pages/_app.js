@@ -5,7 +5,18 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 868:
+/***/ 902:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "O": () => (/* binding */ prefix)
+/* harmony export */ });
+const prefix =  true ? "https://monofactory.github.io/monofactory-react/" : 0;
+
+
+/***/ }),
+
+/***/ 840:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -82,9 +93,8 @@ const PortfolioProvider = PortfolioContext.Provider;
 const PortfolioConsumer = PortfolioContext.Consumer;
 /* harmony default export */ const context = ((/* unused pure expression or super */ null && (PortfolioContext)));
 
-;// CONCATENATED MODULE: ./config/config.js
-const prefix =  true ? "https://monofactory.github.io/monofactory-react/" : 0;
-
+// EXTERNAL MODULE: ./config/config.js
+var config = __webpack_require__(902);
 ;// CONCATENATED MODULE: ./pages/_app.tsx
 
 
@@ -101,12 +111,12 @@ function MyApp({ Component , pageProps  }) {
             jssStyles.parentElement?.removeChild(jssStyles);
         }
     }, []);
-    return /*#__PURE__*/ jsx_runtime_.jsx(material_namespaceObject.ThemeProvider, {
-        theme: theme,
-        children: /*#__PURE__*/ jsx_runtime_.jsx(PortfolioProvider, {
-            value: {
-                prefix: prefix
-            },
+    return /*#__PURE__*/ jsx_runtime_.jsx(PortfolioProvider, {
+        value: {
+            prefix: config/* prefix */.O
+        },
+        children: /*#__PURE__*/ jsx_runtime_.jsx(material_namespaceObject.ThemeProvider, {
+            theme: theme,
             children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
                 ...pageProps
             })
@@ -139,7 +149,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(868));
+var __webpack_exports__ = (__webpack_exec__(840));
 module.exports = __webpack_exports__;
 
 })();
