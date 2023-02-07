@@ -2,7 +2,7 @@
 
 //const isProd = process.env.NODE_ENV === 'production'
 const debug = process.env.NODE_ENV !== 'production'
-const repository = 'monofactory-react'
+const repository = 'mono-react'
 
 const nextConfig = {
   reactStrictMode: true,
@@ -17,7 +17,7 @@ const nextConfig = {
   //   loader: 'akamai',
   //   path: '',
   // },
-  // assetPrefix: isProd ? '/monofactory-react/' : '',
+  // assetPrefix: isProd ? '/mono-react/' : '',
   // images: {
   //   unoptimized: true,
   // },
@@ -28,7 +28,7 @@ const nextConfig = {
   // },
   // assetPrefix:
   //   process.env.NODE_ENV === 'production'
-  //     ? 'https://monofactory.github.io/monofactory-react/'
+  //     ? 'https://monofactory.github.io/mono-react/'
   //     : '',
 }
 
